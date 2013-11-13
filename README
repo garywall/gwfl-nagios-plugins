@@ -1,0 +1,154 @@
+$Id: README,v 1.15 2005/11/25 10:08:26 gary Exp $
+
+Purpose
+-------
+
+The main reason for creating these plugins was the lack of functionality
+in the standard nagios SNMP polling plugin. The nagios plugin was designed 
+to poll one SNMP value, and return a very generic status string, which was 
+then shown in the nagios interface. Some of these plugins poll multiple 
+SNMP values, do additional calculations with the extra data, and provide 
+more useful data in the web interface. The plugins that do not provide 
+noteable improvements over the standard nagios plugins are included simply 
+to illustrate that it is easy to create more custom plugins using the same 
+format and sharing functions with the ones in this package.
+
+These plugins were originally written for HP ProLiant DL360s running the 
+HPASM System Health Agents, but since then have evolved in to supporting
+more ProLiant Models/Generations. Also now included are plugins for
+monitoring Cisco Catalyst Switches, Cisco Content Switches, Netscreen
+Firewalls, the eSensors HVAC EM01, and generic router interfaces.
+
+Basically all we have done is condense the data down into a format we prefer, 
+and obviously make things run faster using C instead of Perl.
+
+Requirements
+------------
+
+All of these plugins share the following requirements:
+
+* net-snmp libraries and header files
+* any libraries that SNMP has been compiled against
+
+Except for the eSensors HVAC EM01 plugin:
+
+* libcurl (version >= 7.9.7)
+
+Compiling and Installation
+--------------------------
+
+If you just want the ProLiant plugins:
+
+make proliant
+make proliant-install DESTDIR=/full/path/to/destdir
+
+And so on for the other types of plugins. If you want them
+all:
+
+make
+make install DESTDIR=/full/path/to/destdir
+
+Usage
+-----
+
+Define a command for each plugin in /etc/nagios/checkcommands.cfg,
+checking <plugin> -h for arguments required/supported, add the
+necessary service checks to your services.cfg, restart nagios, and 
+thats it.
+
+There are two types of plugins:
+
+* Those meant to be run by Nagios
+* Those meant to be run via cron in conjunction with FIFO-RRD
+
+Those meant to be run by cron are plugins which return SNMP counter
+values, which are more suited to RRDtool than Nagios.
+
+Routeriface Plugins
+-------------------
+
+The plugins in the routeriface directory are not meant to be run
+by Nagios. These are only useful if you are running FIFO-RRD to
+create and update graphs. They are run via cron and require some
+extra information to be supplied to them, the interface service
+name, via the `-s' option. This is so that the interface can be
+correlated to a service configured in FIFO-RRD (the Nagios service
+name is usually used for this but cannot be with these plugins
+since Nagios does not run them).
+
+RFC 1628 UPS Plugins
+--------------------
+
+The check_snmp_ups_alarmonbat plugin is meant to be used by Nagios,
+while the others are not. The other plugins are for trending as
+explained in the Routeriface Plugins section.
+
+Apache Plugins
+--------------
+
+These plugins were written to query Apache2 via mod_apache_snmp
+(http://eplx.homeip.net/mod_apache_snmp/english/index.htm). For me
+some of the MIB data was not being populated properly, which I have'nt
+looked into further yet, but the two plugins included in the apache
+directory work fine. The Apache plugins are special actually because
+they have native cluster monitoring support (this was my requirement),
+in that you can use a comma seperated arguement to `-H' to specify
+multiple hosts to check.
+
+check_snmp_apache_workers checks how many busy/idle apache processes
+are running, and calculates a percentage of busyness. Supports checking
+multiple hosts at once and consolidating the data.
+
+check_snmp_apache_totalaccess is another counter checking plugin, not
+meant to be run by Nagios, but via cron for handling by FIFO-RRD. This
+plugin also supports checking multiple hosts at once and also has a
+`-e' (entity) option, which tells the plugin to print whatever name we
+want, to represent the cluster, instead of the usual hostname. 
+
+For example:
+
+Host entry in Nagios for www.blah.com (which is served by two boxes
+running Apache2).
+
+One service configured for this host entry in nagios:
+check_snmp_apache_workers -H box1,box2 -C community -w 70 -c 90
+
+And one check running via cron (`-e' will match the Nagios host entry name):
+check_snmp_apache_totalaccess -H box1,box2 -C community -e www.blah.com
+
+The graphs for both are displayed on the Nagios extinfo page as with
+the other plugins.
+
+BETA Plugins
+------------
+
+There are two plugins we consider beta in this package:
+
+beta/check_snmp_phydrv_ffs - This plugin does better formatting
+then check_snmp_phydrv. If you have a server connected to a disk
+array which ~30 drives, check_snmp_phydrv wont cut it, there are
+too many drives and the output from the plugins will be too long.
+This is where check_snmp_phydrv_ffs comes in handy.
+
+em01/check_http_em01 - A plugin for the eSensors EM01 temperature
+sensor. It works but several things in it need to be fixed.
+
+Support
+-------
+
+Please refer to the Documentation page on the GWFL website for a
+HOWTO on configuring a Nagios system to take full advantage of
+these plugins and other associated GWFL software at:
+
+http://gwfl.daimonic.org/?p=doc
+
+Also, a mailing list has been created, the details are at:
+
+http://gwfl.daimonic.org/index.pl?p=ml
+
+Authors
+-------
+
+Gary Wall <gary@daimonic.org>
+Fredrik Löhr <frelo184@student.liu.se>
+

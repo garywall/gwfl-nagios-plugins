@@ -1,0 +1,579 @@
+2006-05-25 12:03  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/proliant/: check_snmp_temps_dl320g3.c,
+	  check_snmp_temps_dl380g3.c, check_snmp_temps_ml370g4.c: Added
+	  more temperature plugins.
+
+2006-05-25 11:38  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/proliant/check_snmp_phydrv.c: Added
+	  physical and bus drive location/identification abilities.
+
+2006-05-25 10:48  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/proliant/: check_snmp_mem_free.c,
+	  check_snmp_mem_used.c: Fix to take buffers into account aswell as
+	  cached memory.
+
+2005-11-23 14:46  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/README: Minor updates
+
+2005-11-23 13:37  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/README: Typo
+
+2005-11-23 11:44  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: Makefile, README: Apache entry updates
+
+2005-11-23 11:22  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/apache/: Makefile,
+	  check_snmp_apache_totalaccess.c, check_snmp_apache_workers.c:
+	  Added Apache plugins
+
+2005-11-18 07:11  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/proliant/: check_snmp_disk_free.c,
+	  check_snmp_disk_used.c, check_snmp_load.c, check_snmp_mem_free.c,
+	  check_snmp_mem_used.c, check_snmp_nics.c, check_snmp_phydrv.c,
+	  check_snmp_psus.c: Help text updates and an option added to the
+	  memory plugins.
+
+2005-11-18 06:53  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/proliant/Makefile: Update for
+	  check_snmp_temps_dl385g1
+
+2005-11-18 06:52  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/proliant/check_snmp_temps_dl385g1.c:
+	  DL385G1 now supported.
+
+2005-11-10 11:42  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/README: Minor Updates
+
+2005-11-10 11:41  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/beta/check_snmp_phydrv_ffs.c: Minor updates
+
+2005-11-10 11:25  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common/Makefile: Cleanup
+
+2005-11-10 11:24  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/README: Updates
+
+2005-11-10 11:20  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/beta/check_snmp_phydrv_ffs.c: Updated to
+	  use pop_treeint_index
+
+2005-11-10 11:17  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common/common.c: Changed pop_treeint to
+	  pop_treeint_index
+
+2005-11-10 11:15  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common/common.h: Updated authors email
+	  address, and prototype for pop_treeint changed to
+	  pop_treeint_index to more accurately reflect the changes made
+	  previously to treeint.
+
+2005-11-10 11:07  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/rfc1628ups/: check_snmp_ups_inputcurrent.c,
+	  check_snmp_ups_inputvoltage.c, check_snmp_ups_outputcurrent.c,
+	  check_snmp_ups_outputvoltage.c: More bugfixes in perfdata
+
+2005-11-10 10:50  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/proliant/check_snmp_temps_dl380g4.c: Fixed
+	  bugfix ;)
+
+2005-11-10 10:48  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/proliant/check_snmp_temps_dl380g4.c: Bugfix
+	  on perfdata loop
+
+2005-11-04 14:37  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/README: More README updates
+
+2005-11-04 12:16  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/Makefile: Added compile stuff for the RFC
+	  1628 UPS plugins.
+
+2005-11-04 12:10  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/rfc1628ups/: Makefile,
+	  check_snmp_ups_alarmonbat.c, check_snmp_ups_inputcurrent.c,
+	  check_snmp_ups_inputvoltage.c, check_snmp_ups_outputcurrent.c,
+	  check_snmp_ups_outputvoltage.c: Forgot to add the RFC 1628 UPS
+	  plugins!
+
+2005-11-04 11:26  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/README: Small updates.
+
+2005-11-03 21:13  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/proliant/: check_snmp_temps_dl360g3.c,
+	  check_snmp_temps_dl360g4.c, check_snmp_temps_dl380g4.c: Small
+	  fixes to data presentation.
+
+2005-11-02 22:32  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/em01/check_http_em01.c.bak: No need for
+	  this file either.
+
+2005-11-02 22:28  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: beta/check_snmp_phydrv_ffs.c,
+	  ciscocat/check_snmp_cs_cpu.c, ciscocss/check_snmp_css_cpu.c,
+	  common/check_snmp_test.c, common/common.c, common/common.h,
+	  common/common2.c, common/common2.h,
+	  netscreen/check_snmp_ns_cpu.c,
+	  netscreen/check_snmp_ns_mem_used.c,
+	  netscreen/check_snmp_ns_sess_used.c, proliant/check_snmp_cpu.c,
+	  proliant/check_snmp_disk_free.c, proliant/check_snmp_disk_used.c,
+	  proliant/check_snmp_fans.c, proliant/check_snmp_load.c,
+	  proliant/check_snmp_mem_free.c, proliant/check_snmp_mem_used.c,
+	  proliant/check_snmp_nics.c, proliant/check_snmp_phydrv.c,
+	  proliant/check_snmp_psus.c, proliant/check_snmp_swap_free.c,
+	  proliant/check_snmp_swap_used.c,
+	  proliant/check_snmp_temps_dl360g3.c,
+	  proliant/check_snmp_temps_dl360g4.c,
+	  proliant/check_snmp_temps_dl380g4.c,
+	  proliant/check_snmp_totalprocs.c,
+	  routeriface/check_snmp_iface_errors.c,
+	  routeriface/check_snmp_iface_traffic.c: Total overhaul of
+	  everything to work with new SNMP implementation, and removal of
+	  previously added test files.
+
+2005-10-25 20:55  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common/: Makefile, check_snmp_test.c,
+	  common2.c, common2.h: Temporary additions to show Freddy
+	  something :P
+
+2005-10-16 03:46  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/common/common.c: Test to get getnextoid to
+	  return oid* instead of char*
+
+2005-10-09 21:54  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/README: Small updates.
+
+2005-10-09 21:41  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/ChangeLog: Also, previously moved SNMP
+	  initialisation from within getnextoid() into each plugin to avoid
+	  needlessly creating a lot of SNMP sessions. This probably needs
+	  more work.
+
+2005-10-09 21:37  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: Makefile, beta/Makefile,
+	  beta/check_snmp_phydrv_ffs.c, ciscocat/Makefile,
+	  ciscocat/check_snmp_cs_cpu.c, ciscocss/Makefile,
+	  ciscocss/check_snmp_css_cpu.c, common/common.c, common/common.h,
+	  em01/Makefile, em01/check_http_em01.c,
+	  em01/check_http_em01.c.bak, netscreen/Makefile,
+	  netscreen/check_snmp_ns_cpu.c,
+	  netscreen/check_snmp_ns_mem_used.c,
+	  netscreen/check_snmp_ns_sess_used.c, proliant/Makefile,
+	  proliant/check_snmp_cpu.c, proliant/check_snmp_disk_free.c,
+	  proliant/check_snmp_disk_used.c, proliant/check_snmp_fans.c,
+	  proliant/check_snmp_load.c, proliant/check_snmp_mem_free.c,
+	  proliant/check_snmp_mem_used.c, proliant/check_snmp_nics.c,
+	  proliant/check_snmp_phydrv.c, proliant/check_snmp_psus.c,
+	  proliant/check_snmp_swap_free.c, proliant/check_snmp_swap_used.c,
+	  proliant/check_snmp_temps_dl360g3.c,
+	  proliant/check_snmp_temps_dl360g4.c,
+	  proliant/check_snmp_temps_dl380g4.c,
+	  proliant/check_snmp_totalprocs.c, routeriface/Makefile,
+	  routeriface/check_snmp_iface_errors.c,
+	  routeriface/check_snmp_iface_traffic.c: Re-added existing files,
+	  added new ones, added Makefiles, and modified top level Makefile.
+
+2005-10-09 21:31  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: ChangeLog, check_snmp_cpu.c,
+	  check_snmp_disk_free.c, check_snmp_disk_used.c,
+	  check_snmp_fans.c, check_snmp_load.c, check_snmp_mem_free.c,
+	  check_snmp_mem_used.c, check_snmp_nics.c, check_snmp_phydrv.c,
+	  check_snmp_psus.c, check_snmp_swap_free.c,
+	  check_snmp_swap_used.c, check_snmp_temps_dl360g3.c,
+	  check_snmp_temps_dl360g4.c, check_snmp_temps_dl380g4.c,
+	  check_snmp_totalprocs.c, common.c, common.h: Directory
+	  restructuring
+
+2005-09-23 03:59  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/beta/check_snmp_phydrv_ffs.c: Now using
+	  MIB-compliant values for drive status instead of Nagios return
+	  codes
+
+2005-09-22 21:04  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/beta/check_snmp_phydrv_ffs.c: Minor fixes..
+	  Now reports OK, DEGRADED, and FAILED properly
+
+2005-09-22 20:51  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/beta/: check_snmp_phydrv_ffs.c: Minor
+	  fixes... Code still looks like a pile of **** tho...
+
+2005-09-22 20:48  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/beta/check_snmp_phydrv_ffs.c: Minor
+	  fixes... Code still looks like a pile of **** tho...
+
+2005-09-22 20:26  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/beta/check_snmp_phydrv_ffs.c: Started to
+	  implement treeint structures... code looks like a mess right now
+	  ;)
+
+2005-09-21 19:29  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/: common.c, common.h: Added init_treeint()
+	  to set-up a new treeint tree
+
+2005-09-21 03:45  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/Makefile: Rewrote the Makefile to make it
+	  more modularized...
+
+2005-09-20 20:40  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/: check_snmp_cpu.c, check_snmp_disk_free.c,
+	  check_snmp_disk_used.c, check_snmp_fans.c, check_snmp_load.c,
+	  check_snmp_mem_free.c, check_snmp_mem_used.c, check_snmp_nics.c,
+	  check_snmp_phydrv.c, check_snmp_psus.c, check_snmp_swap_free.c,
+	  check_snmp_swap_used.c, check_snmp_temps_dl360g3.c,
+	  check_snmp_temps_dl360g4.c, check_snmp_temps_dl380g4.c,
+	  check_snmp_totalprocs.c, common.c: Removed various warnings...
+	  Additional cleanup should be done with check_snmp_disk_* tho
+
+2005-09-19 21:59  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common.h: Couple syntax problems
+
+2005-09-19 21:45  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/common.c: Fixed a tiny bug in push_treeint
+
+2005-09-19 21:31  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/: common.c, common.h: Implemented treeint
+	  structure with associated functions for push, pop, and test
+
+2005-09-19 21:21  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_nics.c: Added NIC plugin
+
+2005-09-14 19:12  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_cpu.c: Should be no '%' in
+	  perfdata
+
+2005-09-14 19:08  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/Makefile: Mistakes
+
+2005-09-13 00:11  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/Makefile: Makefile updates
+
+2005-09-12 23:48  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_getnext.c: Removed the getnext
+	  test program
+
+2005-09-12 23:46  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_temps_dl360g3.c,
+	  check_snmp_temps_dl360g4.c, check_snmp_temps_dl380g4.c: Added
+	  DL360 G3 temperature checker, and small changes to others
+
+2005-09-12 23:32  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_temps_dl360g4.c,
+	  check_snmp_temps_dl380g4.c: More small changes and addition of
+	  DL380 G4 temperature checker
+
+2005-09-12 23:21  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_temps_dl360g4.c: Here is the one
+	  for the DL360 G4
+
+2005-09-12 23:20  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_cpu.c, check_snmp_disk_free.c,
+	  check_snmp_disk_used.c, check_snmp_fans.c, check_snmp_load.c,
+	  check_snmp_mem_free.c, check_snmp_mem_used.c,
+	  check_snmp_phydrv.c, check_snmp_psus.c, check_snmp_swap_free.c,
+	  check_snmp_swap_used.c, check_snmp_temps.c, common.c: Minor code
+	  changes mainly for tidyness, and removal of generic temperature
+	  checker. Each model/generation of ProLiant will have it's own
+	  temperature checking binary, its easiest this way I think.
+
+2005-09-12 17:34  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_getnext.c, common.c, common.h:
+	  Fixed GETNEXT functionality
+
+2005-09-11 05:22  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_getnext.c, common.c: More blah
+
+2005-09-07 21:19  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_getnext.c, common.c, common.h:
+	  GETNEXT testing stuff, please fix? ;)
+
+2005-09-06 22:55  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_cpu.c, check_snmp_disk_free.c,
+	  check_snmp_disk_used.c, check_snmp_load.c, check_snmp_mem_free.c,
+	  check_snmp_mem_used.c, check_snmp_swap_free.c,
+	  check_snmp_swap_used.c, check_snmp_temps.c,
+	  check_snmp_totalprocs.c, common.h: Added perfdata support via
+	  `-p' command line option.
+
+2005-09-06 22:09  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: Makefile, check_snmp_cpu.c,
+	  check_snmp_disk_free.c, check_snmp_disk_used.c,
+	  check_snmp_mem_free.c, check_snmp_mem_used.c,
+	  check_snmp_swap_free.c, check_snmp_swap_used.c, common.h: Various
+	  fixed, and added perfdata support to check_snmp_cpu.c
+
+2005-09-06 19:19  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_swap.c,
+	  check_snmp_swap_free.c, check_snmp_swap_used.c: Removed
+	  check_snmp_swap.c, and added check_snmp_swap_free.c and
+	  check_snmp_swap_used.c.
+
+2005-09-06 19:14  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_disk.c,
+	  check_snmp_disk_free.c, check_snmp_disk_used.c: Removed
+	  check_snmp_disk.c, and added check_snmp_disk_free.c and
+	  check_snmp_disk_used.c.
+
+2005-09-06 19:05  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_availmem.c,
+	  check_snmp_mem_free.c, check_snmp_mem_used.c: Removed
+	  check_snmp_availmem.c, and added check_snmp_mem_free.c and
+	  check_snmp_mem_used.c.
+
+2005-08-30 15:44  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_disk.c: What a totally retarded
+	  mistake, '==' instead of '<='? I should be shot. :)
+
+2005-07-18 09:42  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common.h: Reduced BUFSIZE
+
+2005-07-17 23:48  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_disk.c: Typoism
+
+2005-07-17 23:47  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_availmem.c, check_snmp_cpu.c,
+	  check_snmp_disk.c, check_snmp_fans.c, check_snmp_load.c,
+	  check_snmp_phydrv.c, check_snmp_psus.c, check_snmp_swap.c,
+	  check_snmp_temps.c, check_snmp_totalprocs.c: Removed more
+	  pointless code (malloc)
+
+2005-07-17 21:36  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: README, check_snmp_availmem.c,
+	  check_snmp_cpu.c, check_snmp_disk.c, check_snmp_fans.c,
+	  check_snmp_load.c, check_snmp_phydrv.c, check_snmp_psus.c,
+	  check_snmp_swap.c, check_snmp_temps.c, check_snmp_totalprocs.c:
+	  Cleaned up unneeded code, implemented some visual enhancements,
+	  fixed some bugs, we have 1.0
+
+2005-07-16 21:17  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/ChangeLog: Something? :P
+
+2005-07-16 21:15  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/ChangeLog: Added ChangeLog
+
+2005-07-16 19:39  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_disk.c, common.c: Added exit()
+	  call to SNMP error state in common.c Fixed pindex input check in
+	  check_snmp_disk.c
+
+2005-07-15 23:04  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_temps.c: Typo: CRITICAL should
+	  of been OK :P
+
+2005-07-15 22:13  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_availmem.c, check_snmp_cpu.c,
+	  check_snmp_disk.c, check_snmp_fans.c, check_snmp_load.c,
+	  check_snmp_phydrv.c, check_snmp_psus.c, check_snmp_swap.c,
+	  check_snmp_temps.c, check_snmp_totalprocs.c, common.c, common.h:
+	  Standardised return values in all files as per Nagios return
+	  codes
+
+2005-07-15 21:46  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common.c: Added error handling to
+	  snmp_open() to prevent segfault on unknown host
+
+2005-07-15 14:23  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common.h: REVISION updated
+
+2005-07-15 10:23  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/README: Removed our nick from README
+	  *shrug* ;)
+
+2005-07-15 10:20  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_psus.c: Same for() fixes in
+	  check_snmp_psus.c
+
+2005-07-15 10:19  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_phydrv.c: for() fixes in
+	  check_snmp_phydrv.c
+
+2005-07-15 10:16  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common.c: Oops in scrub(), fixed
+
+2005-07-15 10:15  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common.c: scrub() was'nt working, changed
+	  how it returns
+
+2005-07-15 10:09  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/common.c: Fix to getoid, we have the mid
+	  if-else clause wrong
+
+2005-07-15 09:46  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_availmem.c, check_snmp_cpu.c,
+	  check_snmp_disk.c, check_snmp_fans.c, check_snmp_load.c,
+	  check_snmp_phydrv.c, check_snmp_psus.c, check_snmp_swap.c,
+	  check_snmp_temps.c, check_snmp_totalprocs.c, common.c: Removed
+	  those nasty ^M's, and removed the unused size int from
+	  check_snmp_disk.c
+
+2005-07-15 01:11  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/: check_snmp_availmem.c, check_snmp_cpu.c,
+	  check_snmp_disk.c, check_snmp_fans.c, check_snmp_load.c,
+	  check_snmp_phydrv.c, check_snmp_psus.c, check_snmp_swap.c,
+	  check_snmp_temps.c, check_snmp_totalprocs.c: Small cleaning..
+	  Just waste of time to free and malloc the same mem over and over
+	  (moved malloc and free outside any for-loops)
+
+2005-07-15 01:10  Fredrik Löhr <frelo184@student.liu.se>
+
+	* gwfl-nagios-plugins-2/common.c: Small cleaning..  Just waste of
+	  time to free and malloc the same mem over and over (moved malloc
+	  and free outside any for-loops)
+
+	  commit.c: { had been replaced by a ; in getoid, changed back
+
+2005-07-15 00:53  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_disk.c: Forgot Freddy :)
+
+2005-07-15 00:51  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/check_snmp_disk.c: Disk space checking
+	  plugin added
+
+2005-07-14 23:59  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: README, check_snmp_availmem.c,
+	  check_snmp_cpu.c, check_snmp_fans.c, check_snmp_load.c,
+	  check_snmp_phydrv.c, check_snmp_psus.c, check_snmp_swap.c,
+	  check_snmp_temps.c, check_snmp_totalprocs.c, common.c, common.h:
+	  Lots of fixes, cheers Freddy!
+
+2005-07-14 20:25  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: Makefile, check_snmp_availmem.c,
+	  check_snmp_cpu.c, check_snmp_fans.c, check_snmp_load.c,
+	  check_snmp_phydrv.c, check_snmp_psus.c, check_snmp_swap.c,
+	  check_snmp_temps.c, check_snmp_totalprocs.c, common.c, common.h:
+	  Some major updates - addition of check_snmp_disk etc
+
+2005-07-14 14:09  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_totalprocs.c, common.h: Yet
+	  again fixes
+
+2005-07-14 14:04  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_fans.c,
+	  check_snmp_totalprocs.c: More fixes
+
+2005-07-14 14:02  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_cpu.c, check_snmp_fans.c,
+	  check_snmp_temps.c, check_snmp_totalprocs.c, common.c: More
+	  messing
+
+2005-07-14 13:46  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/Makefile: Makefile fix
+
+2005-07-14 13:42  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: check_snmp_cpu.c, check_snmp_phydrv.c,
+	  check_snmp_psus.c, check_snmp_temps.c: Minor bug fixes
+
+2005-07-14 13:36  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/Makefile: Makefile fixes
+
+2005-07-14 13:35  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: Makefile, check_snmp_availmem.c,
+	  check_snmp_cpu.c, check_snmp_fans.c, check_snmp_load.c,
+	  check_snmp_phydrv.c, check_snmp_psus.c, check_snmp_swap.c,
+	  check_snmp_temps.c, check_snmp_totalprocs.c: Bug fixes
+
+2005-07-14 10:15  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/README: README update
+
+2005-07-14 10:09  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: Makefile, README: Small fix
+
+2005-07-13 17:04  Gary Wall <gary@daimonic.org>
+
+	* gwfl-nagios-plugins-2/: LICENSE, Makefile, README,
+	  check_snmp_availmem.c, check_snmp_cpu.c, check_snmp_fans.c,
+	  check_snmp_load.c, check_snmp_phydrv.c, check_snmp_psus.c,
+	  check_snmp_swap.c, check_snmp_temps.c, check_snmp_totalprocs.c,
+	  common.c, common.h: Initial Release
+
